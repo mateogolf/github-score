@@ -1,0 +1,10 @@
+
+<form (submit)="onSubmit()" #myform='ngForm'>
+  <h1>GitHub Score</h1>
+  <p>GitHub Username: <input type="text" required name="username" [(ngModel)]="user.username"></p>
+  <button type="submit" [disabled]="myform.invalid">Find Github User</button>
+</form>
+<div>
+  <h1>Your Score: {{score}}</h1>
+  <h3 [ngStyle]="{'color': style}">{{message}}</h3>
+</div>
